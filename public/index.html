@@ -15,14 +15,22 @@
     
     <h1>Movie List</h1>
     <section ng-controller="MovieList">
-        <input type="text" ng-model="movie" placeholder="enter movie title">
-        <button ng-click="newMovie()">add movie</button>
+        <div class="movielist">
+            <input type="text" ng-model="movieTitle" placeholder="enter title">
+            <input type="text" ng-model="movieDirector" placeholder="enter director">
+            <input type="text" ng-model="movieRelease" placeholder="enter release date">
+            <input type="text" ng-model="movieGenre" placeholder="enter genre">
+            <button ng-click="newMovie()">add movie</button>
+        </div>
         
-        <ul>
+        <ul ng-model="list">
             <li ng-repeat="item in movies">
-                {{ item }}
-                <button ng-click="up">thumbs up</button>
-                <button ng-click="down">thumbs down</button>
+                <p>{{ item.title }}</p>
+                <p>{{ item.director }}</p>
+                <p>{{ item.release }}</p>
+                <p>{{ item.genre }}</p>
+                <button ng-click="good">good</button>
+                <button ng-click="bad">bad</button>
             </li>
         </ul>
     </section>

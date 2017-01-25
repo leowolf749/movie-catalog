@@ -9,3 +9,25 @@ body {
     background-color: white;
     color: black;
 }
+
+h1 {
+    text-align: center;
+}
+
+.movielist {
+    @include grid-row();
+    width: 20%;
+
+    input {
+        @include grid-column(12);
+        text-align: center;
+        padding: 5px;
+        margin: 3px;
+    }
+
+    button {
+        @include button;
+        display: block;
+        margin: 0 auto;
+    }
+}
