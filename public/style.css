@@ -1306,3 +1306,31 @@ h1 {
     .movielist button:hover, .movielist button:focus {
       background-color: #14679e;
       color: #fefefe; }
+
+ul {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none; }
+  ul::before, ul::after {
+    display: table;
+    content: ' '; }
+  ul::after {
+    clear: both; }
+  ul li {
+    width: 33.33333%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      ul li {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    ul li:last-child:not(:first-child) {
+      float: right; }
+    ul li p {
+      font-size: .8em; }
+    ul li .title {
+      font-size: 1.5em; }
+  ul button {
+    width: 5%; }

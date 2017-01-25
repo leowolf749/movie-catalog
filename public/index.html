@@ -25,12 +25,12 @@
         
         <ul ng-model="list">
             <li ng-repeat="item in movies">
-                <p>{{ item.title }}</p>
+                <p class="title">{{ item.title }}</p>
                 <p>{{ item.director }}</p>
                 <p>{{ item.release }}</p>
                 <p>{{ item.genre }}</p>
-                <button ng-click="good">good</button>
-                <button ng-click="bad">bad</button>
+                <button ng-click="good"><img src="http://www.billdamon.com/images/rottentomatoes/fresh.png"></button>
+                <button ng-click="bad"><img src="http://videoeta.com/images/eta/rt/rotten.png"></button>
             </li>
         </ul>
     </section>
