@@ -6,16 +6,20 @@
 @include foundation-grid;
 
 body {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
+    font-family: Quicksand;
+    margin-top: 80px;
 }
 
 h1 {
+    font-size: 3em;
     text-align: center;
 }
 
 .movielist {
     @include grid-row();
+    margin-top: 70px;
     width: 20%;
 
     input {
@@ -38,7 +42,9 @@ ul {
 
     li {
         @include grid-column(4);
+        border: 1px dotted;
         p {
+            text-align: center;
             font-size: .8em;
         }
         .title {

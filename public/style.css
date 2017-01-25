@@ -1254,16 +1254,20 @@ button {
         margin-bottom: 0; } }
 
 body {
-  background-color: white;
-  color: black; }
+  background-color: black;
+  color: white;
+  font-family: Quicksand;
+  margin-top: 80px; }
 
 h1 {
+  font-size: 3em;
   text-align: center; }
 
 .movielist {
   max-width: 75rem;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 70px;
   width: 20%; }
   .movielist::before, .movielist::after {
     display: table;
@@ -1321,7 +1325,8 @@ ul {
     width: 33.33333%;
     float: left;
     padding-right: 0.625rem;
-    padding-left: 0.625rem; }
+    padding-left: 0.625rem;
+    border: 1px dotted; }
     @media print, screen and (min-width: 40em) {
       ul li {
         padding-right: 0.9375rem;
@@ -1329,6 +1334,7 @@ ul {
     ul li:last-child:not(:first-child) {
       float: right; }
     ul li p {
+      text-align: center;
       font-size: .8em; }
     ul li .title {
       font-size: 1.5em; }

@@ -13,7 +13,7 @@
     
 <body ng-app="MovieApp">
     
-    <h1>Movie List</h1>
+    <h1>Movie Catalog</h1>
     <section ng-controller="MovieList">
         <div class="movielist">
             <input type="text" ng-model="movieTitle" placeholder="enter title">
@@ -29,8 +29,8 @@
                 <p>{{ item.director }}</p>
                 <p>{{ item.release }}</p>
                 <p>{{ item.genre }}</p>
-                <button ng-click="good"><img src="http://www.billdamon.com/images/rottentomatoes/fresh.png"></button>
-                <button ng-click="bad"><img src="http://videoeta.com/images/eta/rt/rotten.png"></button>
+                <button ng-click="fresh"><img src="http://www.billdamon.com/images/rottentomatoes/fresh.png"></button>
+                <button ng-click="rotten"><img src="http://videoeta.com/images/eta/rt/rotten.png"></button>
             </li>
         </ul>
     </section>
