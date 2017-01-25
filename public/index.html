@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Movie Catalog</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- add js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+    
+<body ng-app="MovieApp">
+    
+    <h1>Movie List</h1>
+    <section ng-controller="MovieList">
+        <input type="text" ng-model="movie" placeholder="enter movie title">
+        <button ng-click="newMovie()">add movie</button>
+        
+        <ul>
+            <li ng-repeat="item in movies">
+                {{ item }}
+                <button ng-click="up">thumbs up</button>
+                <button ng-click="down">thumbs down</button>
+            </li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
