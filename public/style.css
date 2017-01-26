@@ -1254,10 +1254,12 @@ button {
         margin-bottom: 0; } }
 
 body {
-  background-color: black;
+  background-color: #638696;
   color: white;
   font-family: Quicksand;
   margin-top: 80px; }
+  body .hidden {
+    display: none; }
 
 h1 {
   font-size: 3em;
@@ -1315,7 +1317,8 @@ ul {
   max-width: 75rem;
   margin-right: auto;
   margin-left: auto;
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0px; }
   ul::before, ul::after {
     display: table;
     content: ' '; }
@@ -1326,17 +1329,64 @@ ul {
     float: left;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
-    border: 1px dotted; }
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px dotted wheat;
+    background-color: #af8887;
+    margin-top: 30px;
+    height: 265px; }
     @media print, screen and (min-width: 40em) {
       ul li {
         padding-right: 0.9375rem;
         padding-left: 0.9375rem; } }
     ul li:last-child:not(:first-child) {
       float: right; }
+    ul li::before, ul li::after {
+      display: table;
+      content: ' '; }
+    ul li::after {
+      clear: both; }
     ul li p {
       text-align: center;
-      font-size: .8em; }
+      font-size: .9em; }
     ul li .title {
       font-size: 1.5em; }
-  ul button {
-    width: 5%; }
+    ul li button {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 1rem 0;
+      padding: 0.85em 1em;
+      -webkit-appearance: none;
+      border: 1px solid transparent;
+      border-radius: 0;
+      transition: background-color 0.25s ease-out, color 0.25s ease-out;
+      font-size: 0.9rem;
+      line-height: 1;
+      text-align: center;
+      cursor: pointer;
+      background-color: #1779ba;
+      color: #fefefe;
+      width: 47.5%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      padding: 5px;
+      border-radius: 8px;
+      margin: 3px; }
+      [data-whatinput='mouse'] ul li button {
+        outline: 0; }
+      ul li button:hover, ul li button:focus {
+        background-color: #14679e;
+        color: #fefefe; }
+      @media print, screen and (min-width: 40em) {
+        ul li button {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      ul li button:last-child:not(:first-child) {
+        float: right; }
+    ul li img {
+      width: 12%;
+      display: block;
+      margin: 0 auto;
+      padding: 5px; }

@@ -29,8 +29,10 @@
                 <p>{{ item.director }}</p>
                 <p>{{ item.release }}</p>
                 <p>{{ item.genre }}</p>
-                <button ng-click="fresh"><img src="http://www.billdamon.com/images/rottentomatoes/fresh.png"></button>
-                <button ng-click="rotten"><img src="http://videoeta.com/images/eta/rt/rotten.png"></button>
+                <button ng-click="fresh()">fresh</button>
+                <button ng-click="rotten()">rotten</button>
+                <img class="hidden" src="http://www.billdamon.com/images/rottentomatoes/fresh.png">
+                <img class="hidden" src="http://videoeta.com/images/eta/rt/rotten.png">
             </li>
         </ul>
     </section>

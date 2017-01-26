@@ -6,10 +6,14 @@
 @include foundation-grid;
 
 body {
-    background-color: black;
+    background-color: #638696;
     color: white;
     font-family: Quicksand;
     margin-top: 80px;
+
+    .hidden {
+        display: none;
+    }
 }
 
 h1 {
@@ -39,20 +43,39 @@ h1 {
 ul {
     @include grid-row();
     list-style-type: none;
+    padding: 0px;
 
     li {
         @include grid-column(4);
-        border: 1px dotted;
+        @include grid-row();
+        border: 1px dotted wheat;
+        background-color: #af8887;
+        margin-top: 30px;
+        height: 265px;
         p {
             text-align: center;
-            font-size: .8em;
+            font-size: .9em;
         }
         .title {
             font-size: 1.5em;
         }
+
+        button {
+            @include button;
+            @include grid-column(5.7);
+            padding: 5px;
+            border-radius: 8px;
+            margin: 3px;
+        }
+
+        img {
+            width: 12%;
+            display: block;
+            margin: 0 auto;
+            padding: 5px;
+        }
+  
     }
 
-    button {
-        width: 5%;
-    }
+
 }
