@@ -13,7 +13,6 @@ app.controller('MovieList', function ($scope, MovieService){
         $scope.movieDirector = '';
         $scope.movieRelease = '';
         $scope.movieGenre = '';
-        $scope.isGood = null;
 
     }
 
@@ -40,7 +39,6 @@ app.factory('MovieService', function () {
                 release: release,
                 genre: genre,
                 isGood: null,
-    
             });
         },
         getMovies: function () {
