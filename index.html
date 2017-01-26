@@ -24,15 +24,15 @@
         </div>
         
         <ul ng-model="list">
-            <li ng-repeat="item in movies">
-                <p class="title">{{ item.title }}</p>
-                <p>{{ item.director }}</p>
-                <p>{{ item.release }}</p>
-                <p>{{ item.genre }}</p>
-                <button ng-click="fresh()">fresh</button>
-                <button ng-click="rotten()">rotten</button>
-                <img class="hidden" src="http://www.billdamon.com/images/rottentomatoes/fresh.png">
-                <img class="hidden" src="http://videoeta.com/images/eta/rt/rotten.png">
+            <li ng-repeat="currentMovie in movies">
+                <p class="title">{{ currentMovie.title }}</p>
+                <p>{{ currentMovie.director }}</p>
+                <p>{{ currentMovie.release }}</p>
+                <p>{{ currentMovie.genre }}</p>
+                <button ng-hide="currentMovie.isFresh" ng-hide="currentMove.isRotten" ng-click="fresh(currentMovie)">fresh</button>
+                <button ng-hide="currentMovie.isFresh" ng-hide="currentMove.isRotten" ng-click="rotten(currentMovie)">rotten</button>
+                <img ng-show="currentMovie.isFresh" ng-src="http://www.billdamon.com/images/rottentomatoes/fresh.png">
+                <img ng-show="currentMovie.isRotten" ng-src="http://videoeta.com/images/eta/rt/rotten.png">
             </li>
         </ul>
     </section>
